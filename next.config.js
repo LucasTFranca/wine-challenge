@@ -14,5 +14,8 @@ module.exports = withTM({
       config.resolve.fallback.fs = false
     }
     return config
+  },
+  images: {
+    domains: ['https://www.wine.com.br', 'www.wine.com.br']
   }
 })
