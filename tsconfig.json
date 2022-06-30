@@ -6,6 +6,7 @@
     "allowJs": true,
     "strict": true,
     "jsx": "preserve",
+    // "jsx": "preserve",
     "jsxImportSource": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,

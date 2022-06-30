@@ -8,13 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 1.6rem;
-    background-color: #121419;
-    color: #fff;
-    background: linear-gradient(159.02deg, #0F123B 14.25%, #090D2E 56.45%, #020515 86.14%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
+    height: 100vh;
   }
 
   html {
@@ -38,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     height: 6px;
     width: 3px;
     background: transparent;
@@ -117,5 +114,5 @@ export const GlobalStyle = createGlobalStyle`
     @media ${({ theme }) => theme.breakpoints.mobile} {
       width: 90%;
     }
-  }
+  } */
 `
