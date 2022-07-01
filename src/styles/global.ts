@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 1.6rem;
+    background: #F5F5F5;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
