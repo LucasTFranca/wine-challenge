@@ -1,6 +1,19 @@
 import { Product } from 'types'
 
-import { Div, Card, Button, ImageStyled, Name, Price, Discount, DiscountContainer, PriceMember, SpanPriceMember, PriceNonMember, PriceNonMemberContainer } from './ProductCardStyle'
+import {
+  Div,
+  Card,
+  Button,
+  ImageStyled,
+  Name,
+  Price,
+  Discount,
+  DiscountContainer,
+  PriceMember,
+  SpanPriceMember,
+  PriceNonMember,
+  PriceNonMemberContainer
+} from './ProductCardStyle'
 
 interface IProductCardProps {
   product: Product

@@ -3,6 +3,8 @@ import { Product } from 'types'
 
 interface ProviderState {
   products: Product[];
+  productsToShow: Product[];
+  setProductsToShow(value: Product[]): void;
 }
 
 const ProductContext = createContext({} as ProviderState)

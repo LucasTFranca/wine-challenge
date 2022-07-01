@@ -6,12 +6,12 @@ import { Product } from 'types'
 import { Section } from './ProductList'
 
 export default function ProductList () {
-  const { products } = useContext(ProductContext)
+  const { productsToShow } = useContext(ProductContext)
 
   return (
     <Section>
       {
-        products.map((product: Product) => <ProductCard key={`${product.name}-${product.id}`} product={product} />)
+        productsToShow.map((product: Product) => <ProductCard key={`${product.name}-${product.id}`} product={product} />)
       }
     </Section>
   )

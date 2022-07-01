@@ -9,6 +9,7 @@ interface ProviderProps {
 
 function ProductProvider ({ children }: ProviderProps) {
   const [products, setProducts] = useState<Product[]>([])
+  const [productsToShow, setProductsToShow] = useState<Product[]>([])
 
   useEffect(() => {
     async function loadProducts () {
@@ -20,7 +21,7 @@ function ProductProvider ({ children }: ProviderProps) {
     loadProducts()
   }, [])
 
-  const state = useMemo(() => ({ products }), [products])
+  const state = useMemo(() => ({ products, productsToShow, setProductsToShow }), [products, productsToShow])
 
   return (
     <ProductContext.Provider value={state}>

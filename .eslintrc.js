@@ -37,6 +37,7 @@ module.exports = {
     'multiline-ternary': 'off',
     'operator-linebreak': 'off',
     'import/no-absolute-path': [2, { esmodule: false }],
-    camelcase: 'off'
+    'quote-props': 0,
+    'camelcase': 'off'
   }
 }
