@@ -3,7 +3,7 @@ import busca from '../../images/busca.svg'
 import conta from '../../images/conta.svg'
 import winebox from '../../images/winebox.svg'
 
-import { Div, ImageStyled } from './headerRightStyle'
+import { Div, ImageStyled } from './style'
 
 interface IHeaderRightProps {
   searchBarVisible: boolean

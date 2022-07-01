@@ -3,7 +3,7 @@ import ProductContext from 'context/ProductContext'
 import { useContext } from 'react'
 import { Product } from 'types'
 
-import { Section } from './ProductList'
+import { Section } from './style'
 
 export default function ProductList () {
   const { productsToShow } = useContext(ProductContext)

@@ -3,7 +3,7 @@ import HeaderRight from 'components/HeaderRight'
 import SearchBar from 'components/SearchBar'
 import { useState } from 'react'
 
-import { Section, Div } from './headerStyle'
+import { Section, Div } from './style'
 
 export default function Header () {
   const [searchBarVisible, setSearchBarVisible] = useState<boolean>(false)

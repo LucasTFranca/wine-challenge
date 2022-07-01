@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import logo from '../../images/black.svg'
 
-import { SpanStyled, Div } from './headerLeftStyle'
+import { SpanStyled, Div } from './style'
 
 export default function HeaderLeft () {
   return (

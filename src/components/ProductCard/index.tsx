@@ -13,7 +13,7 @@ import {
   SpanPriceMember,
   PriceNonMember,
   PriceNonMemberContainer
-} from './ProductCardStyle'
+} from './style'
 
 interface IProductCardProps {
   product: Product

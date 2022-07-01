@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Div, Form, Input, Span, Button } from './searchBarStyle'
+import { Div, Form, Input, Span, Button } from './style'
 
 import busca from '../../images/busca.svg'
 
