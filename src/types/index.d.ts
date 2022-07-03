@@ -16,3 +16,8 @@ export interface Product {
   flag: string;
   sommelierComment: string;
 }
+
+export interface Page {
+  previous: number;
+  current: number;
+}

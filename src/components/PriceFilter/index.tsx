@@ -14,7 +14,7 @@ interface IInputDictionary {
 }
 
 export default function PriceFilter () {
-  const { products, setProductsToShow } = useContext(ProductContext)
+  const { products, setFilteredProducts } = useContext(ProductContext)
 
   function filterProducts (numberOne: number, numberTwo: number) {
     if (numberOne && numberTwo) {
@@ -35,7 +35,7 @@ export default function PriceFilter () {
     const [numberOne, numberTwo] = getNumbersFromId(id)
 
     const productsToShow = filterProducts(numberOne, numberTwo)
-    setProductsToShow(productsToShow)
+    setFilteredProducts(productsToShow)
   }
 
   function inputHandleChange ({ target }: IInputEvent) {
@@ -45,7 +45,7 @@ export default function PriceFilter () {
       '40': () => {
         const productsToShow = products.filter(({ priceNonMember }) => priceNonMember < Number(target.id))
 
-        setProductsToShow(productsToShow)
+        setFilteredProducts(productsToShow)
       },
       '40-60': () => {
         updateProductsToShow(id)

@@ -1,10 +1,13 @@
-import { createContext } from 'react'
-import { Product } from 'types'
+import { createContext, SetStateAction, Dispatch } from 'react'
+import { Page, Product } from 'types'
 
 interface ProviderState {
   products: Product[];
   productsToShow: Product[];
-  setProductsToShow(value: Product[]): void;
+  productsFound: number;
+  page: Page;
+  setFilteredProducts(value: Product[]): void;
+  setPage: Dispatch<SetStateAction<Page>>;
 }
 
 const ProductContext = createContext({} as ProviderState)

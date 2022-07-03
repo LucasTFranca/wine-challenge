@@ -5,8 +5,14 @@ export const Section = styled.section`
   justify-content: center;
   margin-top: 2em;
 `
-export const Div = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: row;
   width: 80em;
+`
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
