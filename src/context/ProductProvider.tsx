@@ -68,6 +68,7 @@ function ProductProvider ({ children }: ProviderProps) {
   const state = useMemo(() => ({
     page,
     products,
+    filteredProducts,
     productsToShow,
     productsFound,
     setFilteredProducts,

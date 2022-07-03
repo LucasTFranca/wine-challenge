@@ -3,6 +3,7 @@ import { Page, Product } from 'types'
 
 interface ProviderState {
   products: Product[];
+  filteredProducts: Product[];
   productsToShow: Product[];
   productsFound: number;
   page: Page;

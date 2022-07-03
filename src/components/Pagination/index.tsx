@@ -17,7 +17,7 @@ interface IButtonDictionary {
 export default function Pagination () {
   const { page, productsFound, setPage } = useContext(ProductContext)
 
-  const handleClick:MouseEventHandler<HTMLButtonElement> = ({ currentTarget }) => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = ({ currentTarget }) => {
     const { value, className } = currentTarget
     const classNamesSplitted = className.split(' ')
     const lastClassName = classNamesSplitted[classNamesSplitted.length - 1]
