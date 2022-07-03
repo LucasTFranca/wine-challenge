@@ -84,4 +84,5 @@ export const BorderButton = styled.button`
   font-weight: 700;
   font-size: 14px;
   color: #B6116E;
+  background: #F5F5F5;
 `
