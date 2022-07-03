@@ -42,3 +42,7 @@ Para iniciar a aplicação  utilize o comando:
 ```bash
 yarn dev
 ```
+
+## Deploy
+
+Caso queira ver a aplicação segue o link: https://wine-challenge-lyart.vercel.app/
