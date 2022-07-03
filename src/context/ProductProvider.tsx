@@ -13,6 +13,7 @@ function ProductProvider ({ children }: ProviderProps) {
   const [productsToShow, setProductsToShow] = useState<Product[]>([])
   const [page, setPage] = useState<Page>({ previous: 0, current: 0 })
   const [productsFound, setProductFound] = useState<number>(0)
+  const [productsInCart, setProductInCart] = useState<Product[]>([])
 
   useEffect(() => {
     async function loadProducts () {
@@ -23,6 +24,13 @@ function ProductProvider ({ children }: ProviderProps) {
     }
 
     loadProducts()
+  }, [])
+
+  useEffect(() => {
+    if (!localStorage.cart) localStorage.cart = JSON.stringify([])
+    const cartArray = JSON.parse(localStorage.cart)
+
+    setProductInCart(cartArray)
   }, [])
 
   useEffect(() => {
@@ -65,15 +73,21 @@ function ProductProvider ({ children }: ProviderProps) {
     else paginateProducts(filteredProducts)
   }, [filteredProducts, page])
 
+  function updateCart (productsToFillCart: Product[]) {
+    setProductInCart(productsToFillCart)
+  }
+
   const state = useMemo(() => ({
     page,
     products,
     filteredProducts,
     productsToShow,
     productsFound,
+    productsInCart,
     setFilteredProducts,
-    setPage
-  }), [products, productsToShow])
+    setPage,
+    updateCart
+  }), [products, productsToShow, productsInCart])
 
   return (
     <ProductContext.Provider value={state}>

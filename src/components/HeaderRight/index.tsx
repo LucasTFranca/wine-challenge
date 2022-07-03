@@ -1,7 +1,7 @@
+import Cart from 'components/Cart'
 import { Dispatch, SetStateAction } from 'react'
 import busca from '../../images/busca.svg'
 import conta from '../../images/conta.svg'
-import winebox from '../../images/winebox.svg'
 
 import { Div, ImageStyled } from './style'
 
@@ -21,7 +21,7 @@ export default function HeaderRight (props: IHeaderRightProps) {
     <Div>
       <ImageStyled onClick={toggleSearchBarVisible} src={busca} alt="busca" />
       <ImageStyled src={conta} alt="conta" />
-      <ImageStyled src={winebox} alt="winebox" />
+      <Cart />
     </Div>
   )
 }

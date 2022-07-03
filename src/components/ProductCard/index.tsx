@@ -1,3 +1,5 @@
+import ProductContext from 'context/ProductContext'
+import { useContext } from 'react'
 import { Product } from 'types'
 
 import {
@@ -20,18 +22,24 @@ interface IProductCardProps {
 }
 
 export default function ProductCard ({ product }: IProductCardProps) {
+  const { updateCart } = useContext(ProductContext)
+
   function addToCart () {
-    if (!localStorage.cart) localStorage.cart = JSON.stringify([])
     const productsInCart = JSON.parse(localStorage.cart)
 
     const productInCart = productsInCart.find(({ id }: { id: number }) => id === product.id)
 
     if (productInCart) {
       const productsToFillCart = productsInCart.filter(({ id }: { id: number }) => id !== product.id)
+      const arrayCart = [...productsToFillCart, { ...productInCart, quantity: productInCart.quantity += 1 }]
 
-      localStorage.cart = JSON.stringify([...productsToFillCart, { ...productInCart, quantity: productInCart.quantity += 1 }])
+      localStorage.cart = JSON.stringify(arrayCart)
+      updateCart(arrayCart)
     } else {
-      localStorage.cart = JSON.stringify([...productsInCart, { ...product, quantity: 1 }])
+      const arrayCart = [...productsInCart, { ...product, quantity: 1 }]
+
+      localStorage.cart = JSON.stringify(arrayCart)
+      updateCart(arrayCart)
     }
   }
 

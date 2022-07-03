@@ -6,9 +6,11 @@ interface ProviderState {
   filteredProducts: Product[];
   productsToShow: Product[];
   productsFound: number;
+  productsInCart: Product[];
   page: Page;
   setFilteredProducts(value: Product[]): void;
   setPage: Dispatch<SetStateAction<Page>>;
+  updateCart(value: Product[]): void;
 }
 
 const ProductContext = createContext({} as ProviderState)

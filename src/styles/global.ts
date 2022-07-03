@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    position: relative;
   }
 
   html {
